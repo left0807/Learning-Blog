@@ -4,15 +4,15 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Retypeset',
+    title: 'Mypedia',
     // site subtitle
-    subtitle: 'Revive the beauty of typography',
+    subtitle: 'Just my notes',
     // site description
-    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
+    description: 'A website for easy-acess for my note from Obsidian.',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: true, // true, false
     // author name
-    author: 'radishzz',
+    author: 'Left',
     // site url
     url: 'https://retypeset.radishzz.cc',
     // favicon url
@@ -50,14 +50,14 @@ export const themeConfig: ThemeConfig = {
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   global: {
     // default language
-    locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
+    locale: 'zh-tw', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: ['en', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
-    dateFormat: 'YYYY-MM-DD', // YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
+    dateFormat: 'DAY MONTH YYYY', // YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
     // enable table of contents for all posts by default
     toc: true, // true, false
     // enable KaTeX for mathematical formulas rendering
@@ -135,21 +135,22 @@ export const themeConfig: ThemeConfig = {
     // social links
     links: [
       {
-        name: 'RSS',
-        url: '/atom.xml', // or /rss.xml
+        name: 'codeforces',
+        url: 'https://codeforces.com/profile/Left0807', // or /rss.xml
+      },
+      {
+        name: "atcoder",
+        url: 'https://atcoder.jp/users/Left0807'
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/radishzzz/astro-theme-retypeset',
+        url: 'https://github.com/left0807/Learning-Blog',
       },
       {
         name: 'Email',
-        url: 'email@radishzz.cc',
+        url: 'matthewchor9810@gmail.com',
       },
-      // {
-      //   name: 'X',
-      //   url: 'https://x.com/radishzz_',
-      // },
+
     ],
     // year of website start
     startYear: 2025,
