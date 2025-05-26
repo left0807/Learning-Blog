@@ -1,6 +1,6 @@
 export const ui = {
   'en': {
-    title: 'Uncyclopedia',
+    title: 'My Notes',
     subtitle: 'Just my notes',
     description: 'A website for easy-acess for my note from Obsidian.',
     posts: 'Posts',
@@ -9,8 +9,8 @@ export const ui = {
     toc: 'Table of Contents',
   },
   'zh-tw': {
-    title: '我的百科不全書',
-    subtitle: '簡單的學習日誌',
+    title: '我的學習日誌',
+    subtitle: '一個簡單而優美的學習日誌',
     description: '一個簡單的學習日誌，使用 adishzzz 的部落格主題 ———— 重新編排',
     posts: '文章',
     tags: '標籤',
