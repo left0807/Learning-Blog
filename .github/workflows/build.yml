@@ -3,10 +3,10 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to the main branch
+      - master  # Trigger deployment on push to the main branch
   pull_request:
     branches:
-      - main  # Optional: Trigger on pull requests to main for preview
+      - master  # Optional: Trigger on pull requests to main for preview
 
 permissions:
   contents: read

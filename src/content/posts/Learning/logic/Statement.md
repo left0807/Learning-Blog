@@ -38,4 +38,4 @@ published: 2025-05-26
 
 ### Pseudo Proposition (偽命題)
 - no actual meaning
-- e.g. 流沙的阿道夫壓倒性地愛護花生豆花
+- e.g. 流沙的阿道夫壓倒性地愛護花生
