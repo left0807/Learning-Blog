@@ -1,3 +1,5 @@
+## Usage
+A website for me to store my studying notes (Linked to my [Obsidian](https://obsidian.md/) directory)
 ## Credits
 
 - [Typography](https://github.com/moeyua/astro-theme-typography)
