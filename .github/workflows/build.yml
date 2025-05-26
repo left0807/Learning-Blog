@@ -3,10 +3,10 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - master  # Trigger deployment on push to the main branch
+      - master  # Trigger deployment on push to master branch
   pull_request:
     branches:
-      - master  # Optional: Trigger on pull requests to main for preview
+      - master  # Trigger on pull requests to master for preview
 
 permissions:
   contents: read
@@ -23,28 +23,28 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10  # Specify the desired pnpm version
+          version: 10  # Specify pnpm version
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 23  # Specify the Node.js version
-          cache: 'pnpm'  # Enable caching for pnpm
+          node-version: '23'  # Specify Node.js version
+          cache: 'pnpm'  # Cache pnpm dependencies
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build
-        run: pnpm build  # Adjust if your build command differs
+        run: pnpm build  # Ensure this produces output in ./dist
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5  # Update to latest version
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3  # Update to latest version
         with:
-          path: ./dist  # Adjust to your build output directory
+          path: ./dist  # Ensure this matches your build output directory
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4  # Update to latest version
