@@ -1,0 +1,40 @@
+---
+title: Statement
+published: 2025-05-26
+---
+
+# Statement =?= Propositions (命題)
+- Definition: `Propositions asserts that something is or (is not) the case` 
+- Proposition is either True or False
+
+## 命題的分類
+1. Analytic Proposition (分析命題)
+2. Synthetic Proposition (綜合命題)
+
+
+### 分析命題
+- No observation or experience is required
+- Once you understand the meaning, you can tell True/False
+#### Tautology
+- e.g. Triangle has 3 angle
+- e.g. 哥哥畀細佬早出世
+- e.g. 阿媽係女人
+#### Contradiction (矛盾句)
+- CU located in Shatin and not located in Shatin
+
+#### Common misconception (might not be Trivial)
+1. 12 is a prime number (F)
+2. 10006464 is a prime number (F)
+3. 10006463 is a prime number (?)
+
+#### Historical example: 費馬大定理
+- `x^n + y^n = z^n`
+
+### Synthetic Proposition (綜合命題)
+- Other than understanding, experience is needed
+- e.g. mass of electron is 9.11e-31 kg (T)
+- e.g. pressure drops, boiling point of water raise (F)
+
+
+### Pseudo Proposition (偽命題)
+- no actual meaning
