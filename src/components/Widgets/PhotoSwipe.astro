@@ -1,6 +1,5 @@
 <script>
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
-import 'photoswipe/style.css'
 
 let lightbox: PhotoSwipeLightbox
 const pswp = import('photoswipe')
@@ -49,7 +48,6 @@ function setupPhotoSwipe() {
   })
 
   lightbox.init()
-
   bodyElement.setAttribute('data-photoswipe-initialized', 'true')
 }
 
@@ -67,9 +65,3 @@ function lazySetupPhotoSwipe() {
 lazySetupPhotoSwipe()
 document.addEventListener('astro:page-load', lazySetupPhotoSwipe)
 </script>
-
-<style is:global>
-.pswp .pswp__bg {
-  --at-apply: 'bg-background!'
-}
-</style>

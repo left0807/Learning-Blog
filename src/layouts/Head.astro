@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 import katexCSS from 'katex/dist/katex.min.css?url'
+import photoSwipeCSS from 'photoswipe/style.css?url'
 import { allLocales, defaultLocale, themeConfig } from '@/config'
 import { ui } from '@/i18n/ui'
 import { getPageInfo } from '@/utils/page'
@@ -57,8 +58,12 @@ const pageImage = postSlug
 <link rel="preload" href="/fonts/Snell-Bold-SF.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/STIX-VF.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/STIX-Italic-VF.woff2" as="font" type="font/woff2" crossorigin />
-{commentEnabled && walineServerURL && <link rel="stylesheet" href="/assets/waline/waline.css" />}
-{katexEnabled && <link rel="stylesheet" href={katexCSS} />}
+<link rel="preload" href={photoSwipeCSS} as="style" />
+{katexEnabled && <link rel="preload" href={katexCSS} as="style" />}
+{commentEnabled && walineServerURL && <link rel="preload" href="/vendors/waline/waline.css" as="style" />}
+<link rel="stylesheet" href={photoSwipeCSS} media="print" onload={`this.media='all'`} />
+{katexEnabled && <link rel="stylesheet" href={katexCSS} media="print" onload={`this.media='all'`} />}
+{commentEnabled && walineServerURL && <link rel="stylesheet" href="/vendors/waline/waline.css" media="print" onload={`this.media='all'`} />}
 <link rel="alternate" href="/rss.xml" type="application/rss+xml" title="RSS Feed" />
 <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="Atom Feed" />
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -138,6 +143,8 @@ window
 </script>
 
 <!-- Google Analytics -->
+<!-- Define gtag on window object for proper Partytown forwarding -->
+<!-- See https://github.com/QwikDev/partytown/issues/382 -->
 {googleAnalyticsID && (
   <>
     <script
@@ -151,18 +158,18 @@ window
       define:vars={{ googleAnalyticsID, customGoogleAnalyticsJS }}
     >
       window.dataLayer = window.dataLayer || []
-      function gtag(...args) {
-        dataLayer.push(args)
+      window.gtag = function () {
+        // eslint-disable-next-line prefer-rest-params
+        dataLayer.push(arguments)
       }
-      gtag('js', new Date())
-
+      window.gtag('js', new Date())
       if (customGoogleAnalyticsJS) {
-        gtag('config', googleAnalyticsID, {
+        window.gtag('config', googleAnalyticsID, {
           transport_url: new URL(customGoogleAnalyticsJS).origin,
         })
       }
       else {
-        gtag('config', googleAnalyticsID)
+        window.gtag('config', googleAnalyticsID)
       }
     </script>
   </>
